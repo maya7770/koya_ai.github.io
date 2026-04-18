@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with KOYA — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="chat-layout">
+  <!-- Chat Header -->
+  <div class="chat-header">
+    <a href="dashboard.html" style="color:var(--text-muted);font-size:1.2rem;margin-right:0.5rem">←</a>
+    <div class="chat-avatar">✦</div>
+    <div class="chat-avatar-info">
+      <strong>KOYA AI</strong>
+      <small>Your personal mentor</small>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">
+      <div class="msg-avatar">✦</div>
+      <div class="msg-bubble">Hi Alex! 👋 How can I help you grow today?</div>
+    </div>
+    <div class="msg bot">
+      <div class="msg-avatar">✦</div>
+      <div class="msg-bubble">I can help you with planning your day, setting goals, building habits, or just chat about anything on your mind!</div>
+    </div>
+
+    <div style="padding-left:3rem">
+      <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.3rem">💡 Try asking:</div>
+      <div class="chat-suggestions">
+        <div class="suggestion-chip">Help me plan my day</div>
+        <div class="suggestion-chip">How can I be more productive?</div>
+        <div class="suggestion-chip">Set a new goal</div>
+        <div class="suggestion-chip">Build a new habit</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type your message..." />
+    <button class="send-btn" id="sendBtn">➤</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

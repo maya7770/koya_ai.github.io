@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">✦</span><span>KOYA AI</span></a>
+    <ul class="nav-links">
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="plan.html">Daily Plan</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="signin.html" class="btn-ghost">Sign Out</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="dashboard.html">Dashboard</a><a href="plan.html">Daily Plan</a>
+    <a href="progress.html">Progress</a><a href="chat.html">Chat</a>
+  </div>
+</nav>
+
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar">🔥</div>
+      <div class="sidebar-name">Alex Johnson</div>
+      <div class="sidebar-role">Growth Enthusiast</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active"><span class="nav-icon">🏠</span> Dashboard</a>
+      <a href="plan.html"><span class="nav-icon">📅</span> Daily Plan</a>
+      <a href="progress.html"><span class="nav-icon">📈</span> Progress</a>
+      <a href="chat.html"><span class="nav-icon">💬</span> Chat with KOYA</a>
+      <a href="tell.html"><span class="nav-icon">👤</span> My Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <div class="dash-greeting">
+      <h2>Good morning, Alex 🌱</h2>
+      <p>Ready to make today amazing?</p>
+    </div>
+
+    <!-- Stats row -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-icon" style="color:#f97316">🔥</span>
+        <strong>7</strong>
+        <small>Day Streak</small>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon" style="color:#22c55e">📚</span>
+        <strong>12</strong>
+        <small>Tasks Done</small>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon" style="color:#a78bfa">🎯</span>
+        <strong>85%</strong>
+        <small>Progress</small>
+      </div>
+    </div>
+
+    <!-- Focus Card -->
+    <div class="focus-card">
+      <div class="focus-label">Today's Focus</div>
+      <div class="focus-title">Complete 3 Tasks</div>
+      <div class="focus-msg">You're on track! Keep up the momentum 💪</div>
+      <div class="focus-progress-bar">
+        <div class="focus-progress-fill" style="width:66%"></div>
+      </div>
+      <div class="focus-meta">2/3</div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <h3>Quick Actions</h3>
+      <div class="qa-grid">
+        <a href="chat.html" class="qa-item highlight">
+          <div class="qa-icon">💬</div>
+          <div class="qa-text">
+            <strong>Chat with KOYA</strong>
+            <small>Get guidance and support</small>
+          </div>
+        </a>
+        <a href="plan.html" class="qa-item">
+          <div class="qa-icon">📅</div>
+          <div class="qa-text">
+            <strong>My Daily Plan</strong>
+            <small>View and manage your tasks</small>
+          </div>
+        </a>
+        <a href="progress.html" class="qa-item">
+          <div class="qa-icon">📈</div>
+          <div class="qa-text">
+            <strong>Progress</strong>
+            <small>Track your growth journey</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="inspiration-card">
+        <div class="insp-icon">✦</div>
+        <div class="insp-text">
+          <strong>Daily Inspiration</strong>
+          <p>"Small daily improvements lead to stunning long-term results. Keep going!"</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

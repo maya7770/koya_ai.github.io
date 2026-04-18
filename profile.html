@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Profile — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="profile-setup-wrap">
+  <div class="profile-card">
+    <a href="tell.html" style="color:var(--text-muted);font-size:1.2rem;display:inline-block;margin-bottom:1rem;float:left">←</a>
+    <br style="clear:both"/>
+    <h2>Create your KOYA profile</h2>
+    <p>Choose an avatar or upload your photo</p>
+
+    <div class="avatar-preview" style="background:linear-gradient(135deg,#f97316,#ef4444);margin-bottom:1rem">🔥</div>
+
+    <button class="upload-btn">⬆ Upload Photo</button>
+    <div style="color:var(--text-muted);font-size:0.8rem;margin-bottom:1rem">or choose an avatar</div>
+
+    <div class="avatar-grid">
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#667eea,#764ba2)" onclick="selectAvatar(this)">✦</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#f093fb,#f5576c)" onclick="selectAvatar(this)">♥</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#f9a825,#f97316)" onclick="selectAvatar(this)">★</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#4facfe,#00f2fe)" onclick="selectAvatar(this)">⚡</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#43e97b,#38f9d7)" onclick="selectAvatar(this)">🏆</div>
+      <div class="avatar-opt selected" style="background:linear-gradient(135deg,#f97316,#ef4444)" onclick="selectAvatar(this)">🔥</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)" onclick="selectAvatar(this)">📷</div>
+      <div class="avatar-opt" style="background:linear-gradient(135deg,#9ca3af,#6b7280)" onclick="selectAvatar(this)">👤</div>
+    </div>
+
+    <a href="success.html" class="btn-primary" style="width:100%;text-align:center;display:block;padding:1rem">Create Profile →</a>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+function selectAvatar(el) {
+  document.querySelectorAll('.avatar-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  const preview = document.querySelector('.avatar-preview');
+  preview.innerHTML = el.innerHTML;
+  preview.style.background = el.style.background;
+}
+</script>
+</body>
+</html>

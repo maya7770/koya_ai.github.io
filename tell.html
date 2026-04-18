@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About You — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="tell-wrap">
+  <div class="tell-card">
+    <a href="onboarding.html" style="color:var(--text-muted);font-size:1.2rem;display:inline-block;margin-bottom:1rem">←</a>
+    <h2>Tell us about yourself</h2>
+    <p class="sub">This helps us personalize your experience</p>
+
+    <div class="field-label"><span>👤</span> Name</div>
+    <div class="form-group" style="margin-bottom:1.5rem">
+      <input type="text" placeholder="Enter your name" style="width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;" />
+    </div>
+
+    <div class="field-label"><span>📅</span> Age Range</div>
+    <div class="age-options">
+      <button class="age-opt">13–17</button>
+      <button class="age-opt">18–24</button>
+      <button class="age-opt selected">25–34</button>
+      <button class="age-opt">35–44</button>
+      <button class="age-opt">45+</button>
+    </div>
+
+    <div class="field-label"><span>💼</span> Current Status</div>
+    <div class="status-options">
+      <button class="status-opt">Student</button>
+      <button class="status-opt selected">Working Professional</button>
+      <button class="status-opt">Job Seeker</button>
+      <button class="status-opt">Entrepreneur</button>
+      <button class="status-opt">Other</button>
+    </div>
+
+    <div class="field-label"><span>🎯</span> What are your goals? (Select all that apply)</div>
+    <div class="goals-grid">
+      <div class="goal-opt selected">
+        <span class="goal-icon">📚</span>
+        <div class="goal-label">Study & Learning</div>
+      </div>
+      <div class="goal-opt selected">
+        <span class="goal-icon">⚡</span>
+        <div class="goal-label">Productivity</div>
+      </div>
+      <div class="goal-opt">
+        <span class="goal-icon">💼</span>
+        <div class="goal-label">Career Growth</div>
+      </div>
+      <div class="goal-opt">
+        <span class="goal-icon">🎯</span>
+        <div class="goal-label">Build Habits</div>
+      </div>
+      <div class="goal-opt">
+        <span class="goal-icon">💚</span>
+        <div class="goal-label">Health & Wellness</div>
+      </div>
+      <div class="goal-opt">
+        <span class="goal-icon">🎨</span>
+        <div class="goal-label">Creative Projects</div>
+      </div>
+    </div>
+
+    <a href="profile.html" class="btn-primary" style="width:100%;text-align:center;display:block;padding:1rem">Continue →</a>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

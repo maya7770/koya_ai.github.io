@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOYA AI — Your AI Guide for Growth & Life Planning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon">✦</span>
+      <span>KOYA AI</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="plan.html">Daily Plan</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="signin.html" class="btn-ghost">Sign In</a>
+      <a href="onboarding.html" class="btn-primary">Get Started</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="plan.html">Daily Plan</a>
+    <a href="progress.html">Progress</a>
+    <a href="chat.html">Chat</a>
+    <a href="signin.html" class="btn-ghost" style="text-align:center">Sign In</a>
+    <a href="onboarding.html" class="btn-primary" style="text-align:center">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🌱 Your AI Growth Companion</div>
+    <h1 class="hero-title">
+      Grow smarter.<br />
+      <span class="gradient-text">Live better.</span>
+    </h1>
+    <p class="hero-sub">KOYA AI is your personal mentor for life planning, habit building, and daily productivity. Powered by AI, built for you.</p>
+    <div class="hero-ctas">
+      <a href="onboarding.html" class="btn-primary btn-lg">Get Started Free</a>
+      <a href="signin.html" class="btn-outline btn-lg">Sign In</a>
+    </div>
+    <div class="hero-features">
+      <div class="hf-item">
+        <span class="hf-icon">🎯</span>
+        <span>Discover your strengths</span>
+      </div>
+      <div class="hf-item">
+        <span class="hf-icon">🧠</span>
+        <span>AI-powered guidance</span>
+      </div>
+      <div class="hf-item">
+        <span class="hf-icon">💚</span>
+        <span>Build better habits</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-mockup">
+    <div class="phone-frame">
+      <div class="phone-screen">
+        <div class="mock-greeting">
+          <div>
+            <div class="mock-hello">Good morning, Alex 🌱</div>
+            <div class="mock-sub">Ready to make today amazing?</div>
+          </div>
+          <div class="mock-ai-btn">✦</div>
+        </div>
+        <div class="mock-focus-card">
+          <div class="mock-focus-label">Today's Focus</div>
+          <div class="mock-focus-title">Complete 3 Tasks</div>
+          <div class="mock-focus-msg">You're on track! Keep up the momentum 💪</div>
+          <div class="mock-progress-bar"><div class="mock-progress-fill" style="width:66%"></div></div>
+          <div class="mock-progress-label">2/3</div>
+        </div>
+        <div class="mock-stats">
+          <div class="mock-stat"><span class="stat-icon orange">🔥</span><strong>7</strong><small>Day Streak</small></div>
+          <div class="mock-stat"><span class="stat-icon green">📚</span><strong>12</strong><small>Tasks Done</small></div>
+          <div class="mock-stat"><span class="stat-icon purple">🎯</span><strong>85%</strong><small>Progress</small></div>
+        </div>
+        <div class="mock-action-btn">
+          <span>💬</span>
+          <div><strong>Chat with KOYA</strong><small>Get guidance and support</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title">Everything you need to <span class="gradient-text">grow</span></h2>
+    <p class="section-sub">KOYA combines AI mentorship with practical productivity tools</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">🎯</div>
+        <h3>Daily Focus</h3>
+        <p>Set your daily goals and stay on track with AI-curated focus targets tailored to your growth journey.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#667eea,#764ba2)">🧠</div>
+        <h3>KOYA AI Mentor</h3>
+        <p>Chat anytime with your personal AI mentor for planning advice, habit support, and motivational guidance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#f093fb,#f5576c)">📅</div>
+        <h3>Smart Daily Plans</h3>
+        <p>Get personalized daily task schedules with priority levels and smart reminders that adapt to your lifestyle.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">📈</div>
+        <h3>Progress Tracking</h3>
+        <p>Visualize your growth with weekly completion charts, streak counters, and productivity trend analysis.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">🔥</div>
+        <h3>Habit Streaks</h3>
+        <p>Build lasting habits with daily streak tracking, momentum notifications, and celebration milestones.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg,#fa709a,#fee140)">✨</div>
+        <h3>Daily Inspiration</h3>
+        <p>Start every day with AI-curated wisdom and motivational insights personalized to your goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-block"><div class="stat-num">50K+</div><div class="stat-lbl">Active Users</div></div>
+      <div class="stat-block"><div class="stat-num">1.2M</div><div class="stat-lbl">Tasks Completed</div></div>
+      <div class="stat-block"><div class="stat-num">79%</div><div class="stat-lbl">Avg. Completion Rate</div></div>
+      <div class="stat-block"><div class="stat-num">4.9★</div><div class="stat-lbl">User Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="blob blob-cta1"></div>
+      <div class="blob blob-cta2"></div>
+      <div class="cta-content">
+        <h2>Ready to start your journey?</h2>
+        <p>Join thousands of people growing smarter every day with KOYA AI.</p>
+        <a href="onboarding.html" class="btn-primary btn-lg">Start for Free →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo"><span class="logo-icon">✦</span> KOYA AI</div>
+    <p>Your AI guide for growth and life planning.</p>
+    <p style="font-size:0.8rem;opacity:0.5;margin-top:1rem">© 2026 KOYA AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

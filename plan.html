@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Plan — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">✦</span><span>KOYA AI</span></a>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="plan.html" class="active">Daily Plan</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+    <div class="nav-actions"><a href="signin.html" class="btn-ghost">Sign Out</a></div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="dashboard.html">Dashboard</a><a href="plan.html">Daily Plan</a>
+    <a href="progress.html">Progress</a><a href="chat.html">Chat</a>
+  </div>
+</nav>
+
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar">🔥</div>
+      <div class="sidebar-name">Alex Johnson</div>
+      <div class="sidebar-role">Growth Enthusiast</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">🏠</span> Dashboard</a>
+      <a href="plan.html" class="active"><span class="nav-icon">📅</span> Daily Plan</a>
+      <a href="progress.html"><span class="nav-icon">📈</span> Progress</a>
+      <a href="chat.html"><span class="nav-icon">💬</span> Chat with KOYA</a>
+      <a href="tell.html"><span class="nav-icon">👤</span> My Profile</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="plan-content">
+      <div class="plan-header">
+        <div>
+          <h2>Today's Plan</h2>
+          <div class="plan-date">Saturday, April 18, 2026</div>
+        </div>
+        <button class="add-task-btn" id="addTaskBtn">+ Add Task</button>
+      </div>
+
+      <!-- Progress -->
+      <div class="focus-card" style="margin-bottom:1.5rem">
+        <div class="focus-label">Daily Progress</div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div class="focus-title">2/5</div>
+          <div style="text-align:right"><div style="font-size:1.6rem;font-weight:700;font-family:'Sora',sans-serif">40%</div><div style="font-size:0.8rem;opacity:0.85">Complete</div></div>
+        </div>
+        <div class="focus-progress-bar"><div class="focus-progress-fill" style="width:40%"></div></div>
+      </div>
+
+      <!-- Task list -->
+      <div id="taskList" class="task-list">
+        <div class="task-item priority-high done">
+          <div class="task-check checked" onclick="toggleTask(this)">✓</div>
+          <div class="task-info">
+            <div class="task-name strikethrough">Review course material for midterm</div>
+            <div class="task-meta">
+              <span class="task-time">🕐 9:00 AM</span>
+              <span class="priority-badge high">high</span>
+            </div>
+          </div>
+        </div>
+        <div class="task-item priority-high done">
+          <div class="task-check checked" onclick="toggleTask(this)">✓</div>
+          <div class="task-info">
+            <div class="task-name strikethrough">Complete project proposal draft</div>
+            <div class="task-meta">
+              <span class="task-time">🕐 11:00 AM</span>
+              <span class="priority-badge high">high</span>
+            </div>
+          </div>
+        </div>
+        <div class="task-item priority-medium">
+          <div class="task-check" onclick="toggleTask(this)"></div>
+          <div class="task-info">
+            <div class="task-name">Team meeting – discuss timeline</div>
+            <div class="task-meta">
+              <span class="task-time">🕐 2:00 PM</span>
+              <span class="priority-badge medium">medium</span>
+            </div>
+          </div>
+        </div>
+        <div class="task-item priority-low">
+          <div class="task-check" onclick="toggleTask(this)"></div>
+          <div class="task-info">
+            <div class="task-name">Practice Spanish for 30 minutes</div>
+            <div class="task-meta">
+              <span class="task-time">🕐 4:00 PM</span>
+              <span class="priority-badge low">low</span>
+            </div>
+          </div>
+        </div>
+        <div class="task-item priority-medium">
+          <div class="task-check" onclick="toggleTask(this)"></div>
+          <div class="task-info">
+            <div class="task-name">Evening workout session</div>
+            <div class="task-meta">
+              <span class="task-time">🕐 6:00 PM</span>
+              <span class="priority-badge medium">medium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KOYA Tip -->
+      <div class="koya-tip">
+        <div class="tip-icon">💡</div>
+        <div class="tip-text">
+          <strong>KOYA's Tip</strong>
+          <p>You have a productive morning! Consider taking a short break after your team meeting to recharge.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Add Task Modal -->
+<div class="modal-overlay" id="addTaskModal">
+  <div class="modal">
+    <h3>Add New Task</h3>
+    <div class="form-group">
+      <label>Task Name</label>
+      <input type="text" id="taskName" placeholder="e.g. Read for 30 minutes" />
+    </div>
+    <div class="form-group">
+      <label>Time</label>
+      <input type="time" id="taskTime" />
+    </div>
+    <div class="form-group">
+      <label>Priority</label>
+      <select id="taskPriority">
+        <option value="high">High</option>
+        <option value="medium" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="closeModal">Cancel</button>
+      <button class="btn-primary" id="saveTask">Add Task</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

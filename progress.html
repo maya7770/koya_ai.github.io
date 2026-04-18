@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress — KOYA AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">✦</span><span>KOYA AI</span></a>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="plan.html">Daily Plan</a></li>
+      <li><a href="progress.html" class="active">Progress</a></li>
+      <li><a href="chat.html">Chat</a></li>
+    </ul>
+    <div class="nav-actions"><a href="signin.html" class="btn-ghost">Sign Out</a></div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="dashboard.html">Dashboard</a><a href="plan.html">Daily Plan</a>
+    <a href="progress.html">Progress</a><a href="chat.html">Chat</a>
+  </div>
+</nav>
+
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar">🔥</div>
+      <div class="sidebar-name">Alex Johnson</div>
+      <div class="sidebar-role">Growth Enthusiast</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">🏠</span> Dashboard</a>
+      <a href="plan.html"><span class="nav-icon">📅</span> Daily Plan</a>
+      <a href="progress.html" class="active"><span class="nav-icon">📈</span> Progress</a>
+      <a href="chat.html"><span class="nav-icon">💬</span> Chat with KOYA</a>
+      <a href="tell.html"><span class="nav-icon">👤</span> My Profile</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="progress-content">
+      <div style="margin-bottom:1.5rem">
+        <h2 style="font-size:1.6rem;margin-bottom:0.25rem">Your Progress</h2>
+        <p style="color:var(--text-muted)">Track your growth and achievements</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="progress-stats">
+        <div class="prog-stat">
+          <span class="prog-stat-icon">🔥</span>
+          <strong>7</strong>
+          <small>Day Streak</small>
+        </div>
+        <div class="prog-stat">
+          <span class="prog-stat-icon">🎯</span>
+          <strong>42</strong>
+          <small>Tasks Done</small>
+        </div>
+        <div class="prog-stat">
+          <span class="prog-stat-icon">🏅</span>
+          <strong>79%</strong>
+          <small>Completion</small>
+        </div>
+      </div>
+
+      <!-- Weekly Bar Chart -->
+      <div class="chart-card">
+        <h3>📅 Weekly Task Completion</h3>
+        <div class="bar-chart">
+          <div class="bar-group">
+            <div class="bar" style="height:70%" data-val="8">
+              <div class="bar-tooltip">Mon: 8</div>
+            </div>
+            <div class="bar-label">Mon</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar today" style="height:90%" data-val="7">
+              <div class="bar-tooltip">Tue: 7</div>
+            </div>
+            <div class="bar-label">Tue</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:60%" data-val="6">
+              <div class="bar-tooltip">Wed: 6</div>
+            </div>
+            <div class="bar-label">Wed</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:55%" data-val="5">
+              <div class="bar-tooltip">Thu: 5</div>
+            </div>
+            <div class="bar-label">Thu</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:50%" data-val="5">
+              <div class="bar-tooltip">Fri: 5</div>
+            </div>
+            <div class="bar-label">Fri</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:35%" data-val="4">
+              <div class="bar-tooltip">Sat: 4</div>
+            </div>
+            <div class="bar-label">Sat</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:25%" data-val="3">
+              <div class="bar-tooltip">Sun: 3</div>
+            </div>
+            <div class="bar-label">Sun</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productivity Trend Line Chart -->
+      <div class="chart-card">
+        <h3>📈 Productivity Trend</h3>
+        <svg class="line-chart-svg" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#43e97b"/>
+              <stop offset="100%" stop-color="#38f9d7"/>
+            </linearGradient>
+          </defs>
+          <!-- Grid lines -->
+          <line x1="0" y1="20" x2="400" y2="20" stroke="#e5e9f0" stroke-width="1"/>
+          <line x1="0" y1="50" x2="400" y2="50" stroke="#e5e9f0" stroke-width="1"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="#e5e9f0" stroke-width="1"/>
+          <!-- Labels -->
+          <text x="0" y="95" font-size="10" fill="#9ca3af">Week 1</text>
+          <text x="120" y="95" font-size="10" fill="#9ca3af">Week 2</text>
+          <text x="240" y="95" font-size="10" fill="#9ca3af">Week 3</text>
+          <text x="360" y="95" font-size="10" fill="#9ca3af">Week 4</text>
+          <!-- Line -->
+          <polyline
+            points="0,75 120,60 240,45 360,25"
+            fill="none"
+            stroke="url(#lineGrad)"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- Dots -->
+          <circle cx="0" cy="75" r="5" fill="#43e97b"/>
+          <circle cx="120" cy="60" r="5" fill="#43e97b"/>
+          <circle cx="240" cy="45" r="5" fill="#43e97b"/>
+          <circle cx="360" cy="25" r="5" fill="#43e97b"/>
+        </svg>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-card">
+        <h3>This Week's Summary</h3>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <div class="summary-item-label">Tasks Completed</div>
+            <div class="summary-item-val">42</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Success Rate</div>
+            <div class="summary-item-val">79%</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Active Days</div>
+            <div class="summary-item-val">7/7</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-item-label">Avg. Daily</div>
+            <div class="summary-item-val">6</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement -->
+      <div class="achievement-card">
+        <div class="ach-icon">📊</div>
+        <div class="ach-text">
+          <strong>You're on fire! 🔥</strong>
+          <p>Your productivity increased by 31% this month. Keep up the amazing work, Alex!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
